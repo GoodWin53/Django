@@ -1,0 +1,14 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+Список стран
+{%endblock%}
+
+{%block content%}
+    <ol>
+        {% for el in country_list %}
+            <li>{{el.country}}</li>
+        {% endfor %}
+    </ol>
+{%endblock%}
+

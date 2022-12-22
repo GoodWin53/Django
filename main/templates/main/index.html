@@ -1,0 +1,14 @@
+  {%extends 'main/base.html'%}
+
+{%block title%}
+  {{ title }}
+{%endblock%}
+
+{%block content%}
+    <h4>*Произвольное приветствие*</h4>
+    <a class="me-3 py-2 text-blue text-decoration-none" href="{%url 'countries'%}">Список стран</a>
+    <a class="me-3 py-2 text-blue text-decoration-none" href="{%url 'languages'%}">Список языков</a>
+
+{%endblock%}
+
+

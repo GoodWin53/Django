@@ -1,0 +1,49 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+  Страны
+{%endblock%}
+
+{%block content%}
+    <div style="display:flex" class="text-center">
+{% for el in alf %}
+    <span>
+        <a href="/countries-list/{{el}}" style="margin-left: 10px;">{{el}} </a>
+    </span>
+{% endfor %}
+</div>
+<div class="container">
+      <h1 style="margin-top: 10px;">Страны</h1>
+      <hr>
+
+      <ul class="list-group list-group-flush">
+        {% for employee in page_obj %}
+          <ol>
+              <a href="/country/{{employee}}" class="list-group-item">{{ employee }}</a>
+          </ol>
+        {% endfor %}
+      </ul>
+
+      <br><hr>
+
+     {% include "./pagination.html" %}
+</div>
+<h5>Страны:</h5>
+<ol>
+{% for el in letter %}
+    <li style="margin-left: 10px;">
+        <a href="/country/{{el}}">{{ el }}</a>
+    </li>
+{% endfor %}
+</ol>
+<ol>
+
+{% for el in dick %}
+    <li style="margin-left: 10px;">
+        <a href="/country/{{el}}">{{ el }}</a>
+    </li>
+
+{% endfor %}
+</ol>
+
+{%endblock%}

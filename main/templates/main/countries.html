@@ -1,0 +1,17 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+  {{ lang_main }}
+{%endblock%}
+
+{%block content%}
+    <h5>{{lang_main}}</h5>
+    <ol>
+    {% for el in countrys %}
+        <li style="margin-left: 20px;">
+            <a href="/country/{{el}}">{{el}}</a>
+        </li>
+    {%endfor%}
+    </ol>
+    <h6><a href="/languages-list">Список языков</a></h6>
+{%endblock%}

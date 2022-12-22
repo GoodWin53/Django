@@ -1,0 +1,17 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+  Языки
+{%endblock%}
+
+{%block content%}
+    <h5>Языки:</h5>
+<ol>
+{% for el in list %}
+    <li style="margin-left: 10px;">
+        <a href="/languages/{{el}}">{{ el }}</a>
+    </li>
+
+{% endfor %}
+</ol>
+{%endblock%}
